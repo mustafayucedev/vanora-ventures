@@ -1,0 +1,112 @@
+.products {
+    background-color: $gray-color;
+    padding-block: 72px;
+    .products-title {
+        text-align: center;
+        color: $primary-color;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        margin-block-end: 48px;
+    }
+    .products-content {
+        padding-inline: 72px;
+        .products-item {
+            background-color: $white-color;
+            border: 1px solid $border-color;
+            border-bottom: 4px solid $secondary-color;
+            .products-information {
+                padding: 24px;
+                .products-name {
+                    color: $primary-color;
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-block-end: 12px;
+                }
+                .products-description {
+                    color: $primary-color;
+                    line-height: 20px;
+                }
+            }
+            .products-buttons {
+                padding: 0 8px 12px 8px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                column-gap: 8px;
+                a {
+                    @include center;
+                    flex: 1 0 0;
+                    height: 45px;
+                    border-radius: 2px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    &.button-learn {
+                        background-color: $third-color;
+                        color: $secondary-color;
+                    }
+                    &.button-find {
+                        background-color: $secondary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    @include max($md) {
+        padding-block: 36px;
+        .products-title {
+            text-align: left;
+            font-size: 24px;
+            line-height: 30px;
+            margin-block-end: 24px;
+        }
+        .products-content {
+            padding-inline: 0;
+        }
+    }
+}
+
+.slick-slider {
+    overflow: hidden;
+    .slick-track {
+        display: flex;
+    }
+    .slick-slide {
+        margin-left: 12px;
+        margin-right: 12px;
+        @include max($md) {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+    }
+    .slick-dots {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-block-start: 48px !important;
+        li {
+            margin: 0 6px;
+            button {
+                font-size: 0;
+                background-color: transparent;
+                background-color: $secondary-color;
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                padding: 0;
+            }
+            &.slick-active {
+                button {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+        @include max($md) {
+            margin-block-start: 16px !important;
+        }
+    }
+}

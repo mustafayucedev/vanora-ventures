@@ -1,0 +1,9 @@
+.container {
+    padding-inline: 60px;
+}
+
+@include max($md) {
+    .container {
+        padding-inline: 20px;
+    }
+}

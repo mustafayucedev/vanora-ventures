@@ -1,0 +1,106 @@
+footer {
+    background-color: #434448;
+    padding-block: 40px;
+    @include max($md) {
+        padding-block: 16px;
+    }
+}
+
+.video {
+    .video-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-block-end: 40px;
+        .video-title {
+            max-width: 680px;
+            p {
+                color: $white-color;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 50px;
+            }
+        }
+        .video-button {
+            a {
+                @include center;
+                width: 310px;
+                height: 45px;
+                background-color: $white-color;
+                color: $secondary-color;
+                font-size: 16px;
+                font-weight: 700;
+                transition: $transition;
+                &:hover {
+                    background-color: $secondary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .video-content {
+        position: relative;
+        .video-image {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        .video-icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+    }
+    .video-button-mobile {
+        margin-block-start: 16px;
+        display: none;
+        a {
+            @include center;
+            width: 100%;
+            height: 45px;
+            background-color: $white-color;
+            color: $secondary-color;
+            font-size: 12px;
+            font-weight: 700;
+            transition: $transition;
+            &:hover {
+                background-color: $secondary-color;
+                color: $white-color;
+            }
+        }
+    }
+    @include max($md) {
+        .video-header {
+            display: block;
+            margin-block-end: 16px;
+            .video-title {
+                max-width: 100%;
+                p {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+            .video-button {
+                display: none;
+            }
+        }
+        .video-content {
+            .video-icon {
+                a {
+                    img {
+                        width: 56px;
+                        height: 56px;
+                    }
+                }
+            }
+        }
+        .video-button-mobile {
+            display: flex;
+        }
+    }
+}
